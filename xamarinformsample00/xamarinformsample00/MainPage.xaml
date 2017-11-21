@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:xamarinformsample00"
+               NavigationPage.HasNavigationBar="false"
+             x:Class="xamarinformsample00.MainPage">
+
+
+    <NavigationPage Title="カメラ" Icon="iconmonstr-photo-camera-4-24.png">
+        <x:Arguments>
+            <ContentPage Title="カメラ">
+                <ContentPage.ToolbarItems>
+                    <ToolbarItem Name = "MenuItem1"/>
+                </ContentPage.ToolbarItems>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="本棚" Icon="iconmonstr-bookmark-1-24.png">
+        <x:Arguments>
+            <ContentPage>
+                <TableView Intent="Data">
+                    <TableView.Root>
+                        <TableRoot>
+                            <TableSection Title="TableViewについて Intent=Data">
+                                <TextCell Text="テキストセル" Detail="詳細"/>
+                                <EntryCell Placeholder="ここに入力してください"/>
+                                <ImageCell ImageSource = "https://i2.wp.com/oxamarin.com/wp-content/uploads/2016/12/りんちゃん.jpg"/>
+                                <SwitchCell Text="スイッチ"/>
+                            </TableSection>
+                        </TableRoot>
+                    </TableView.Root>
+                </TableView>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="さがす" Icon="iconmonstr-star-2-32.png">
+        <x:Arguments>
+            <ContentPage Title="本を楽天から探す">
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="設定" Icon="iconmonstr-gear-1-24.png">
+        <x:Arguments>
+            <ContentPage Title="設定">
+                <TableView Intent="Data">
+                    <TableView.Root>
+                        <TableRoot>
+                            <TableSection>
+                                <TextCell Text="一般" Tapped="Common" />
+                                <TextCell Text="バックアップ復元" Tapped="Backup" />
+                                <TextCell Text="ヘルプ" Tapped="Help" />
+                            </TableSection>
+                        </TableRoot>
+                    </TableView.Root>
+                </TableView>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+
+</TabbedPage>
+   
+
+  
+
+
