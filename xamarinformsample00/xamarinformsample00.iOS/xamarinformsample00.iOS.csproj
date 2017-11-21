@@ -137,7 +137,7 @@
     <BundleResource Include="Resources\trees-1915248_1920.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ipadサイズ背景（仮）.png" />
+    <BundleResource Include="Resources\background.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\背景（仮）Ver4.png" />
@@ -171,9 +171,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\LaunchScreen.storyboard.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ipadサイズ背景（仮） - コピー.png" />
   </ItemGroup>
   <Import Project="..\xamarinformsample00\xamarinformsample00.projitems" Label="Shared" Condition="Exists('..\xamarinformsample00\xamarinformsample00.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
