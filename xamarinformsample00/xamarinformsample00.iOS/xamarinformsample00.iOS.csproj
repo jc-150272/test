@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.props')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -92,7 +92,9 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
-    <None Include="Info.plist" />
+    <None Include="Info.plist">
+      <SubType>Designer</SubType>
+    </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork@2x" />
@@ -119,19 +121,38 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.280\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.280\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Platform.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.280\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.280\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="ZXing.Net.Mobile.Core, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.2.3.2\lib\Xamarin.iOS10\ZXing.Net.Mobile.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Forms, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.Forms.2.3.2\lib\Xamarin.iOS10\ZXing.Net.Mobile.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Forms.iOS, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.Forms.2.3.2\lib\Xamarin.iOS10\ZXing.Net.Mobile.Forms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.portable, Version=2.3.2.0, Culture=neutral, PublicKeyToken=830ae994e36ac27d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.2.3.2\lib\Xamarin.iOS10\zxing.portable.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXingNetMobile, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.2.3.2\lib\Xamarin.iOS10\ZXingNetMobile.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\trees-1915248_1920.jpg" />
@@ -140,28 +161,25 @@
     <BundleResource Include="Resources\background.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\背景（仮）Ver4.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\iconmonstr-photo-camera-4-32.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\iconmonstr-gear-1-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\iconmonstr-star-2-32.png" />
+    <BundleResource Include="Resources\star_32.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\iconmonstr-bookmark-1-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\iconmonstr-bookmark-1-24.png" />
+    <BundleResource Include="Resources\bookmark_24.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\iconmonstr-gear-1-24.png" />
+    <BundleResource Include="Resources\gear_24.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\iconmonstr-photo-camera-4-24.png" />
+    <BundleResource Include="Resources\camera_24.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\iconmonstr-star-2-24.png" />
@@ -172,14 +190,29 @@
   <ItemGroup>
     <BundleResource Include="Resources\LaunchScreen.storyboard.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blue_book_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gray_book_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\red_star_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gray_star_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\star_test.gif" />
+  </ItemGroup>
   <Import Project="..\xamarinformsample00\xamarinformsample00.projitems" Label="Shared" Condition="Exists('..\xamarinformsample00\xamarinformsample00.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.props'))" />
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.targets'))" />
   </Target>
-  <Import Project="..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.targets')" />
 </Project>

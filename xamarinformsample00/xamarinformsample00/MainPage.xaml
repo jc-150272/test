@@ -2,61 +2,37 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:xamarinformsample00"
-               NavigationPage.HasNavigationBar="false"
+             NavigationPage.HasNavigationBar="false"
              x:Class="xamarinformsample00.MainPage">
 
-
-    <NavigationPage Title="カメラ" Icon="iconmonstr-photo-camera-4-24.png">
+    <NavigationPage Title="カメラ" Icon="camera_24.png">
         <x:Arguments>
-            <ContentPage Title="カメラ">
-                <ContentPage.ToolbarItems>
-                    <ToolbarItem Name = "MenuItem1"/>
-                </ContentPage.ToolbarItems>
-            </ContentPage>
+            <local:CameraPage />
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="本棚" Icon="iconmonstr-bookmark-1-24.png">
+    <NavigationPage Title="本棚" Icon="bookmark_24.png">
         <x:Arguments>
-            <ContentPage>
-                <TableView Intent="Data">
-                    <TableView.Root>
-                        <TableRoot>
-                            <TableSection Title="TableViewについて Intent=Data">
-                                <TextCell Text="テキストセル" Detail="詳細"/>
-                                <EntryCell Placeholder="ここに入力してください"/>
-                                <ImageCell ImageSource = "https://i2.wp.com/oxamarin.com/wp-content/uploads/2016/12/りんちゃん.jpg"/>
-                                <SwitchCell Text="スイッチ"/>
-                            </TableSection>
-                        </TableRoot>
-                    </TableView.Root>
-                </TableView>
-            </ContentPage>
+            <local:BookPage />
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="さがす" Icon="iconmonstr-star-2-32.png">
+    <NavigationPage Title="さがす" Icon="star_32.png">
         <x:Arguments>
-            <ContentPage Title="本を楽天から探す">
-            </ContentPage>
+            <local:SeekPage/>
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="設定" Icon="iconmonstr-gear-1-24.png">
+    <NavigationPage Title="設定" Icon="gear_24.png">
         <x:Arguments>
-            <ContentPage Title="設定">
-                <TableView Intent="Data">
-                    <TableView.Root>
-                        <TableRoot>
-                            <TableSection>
-                                <TextCell Text="一般" Tapped="Common" />
-                                <TextCell Text="バックアップ復元" Tapped="Backup" />
-                                <TextCell Text="ヘルプ" Tapped="Help" />
-                            </TableSection>
-                        </TableRoot>
-                    </TableView.Root>
-                </TableView>
-            </ContentPage>
+          <local:PropertyPage />
+        </x:Arguments>
+    </NavigationPage>
+
+
+    <NavigationPage Title="さがす" Icon="star_32.png">
+        <x:Arguments>
+            <local:DetailPage/>
         </x:Arguments>
     </NavigationPage>
 

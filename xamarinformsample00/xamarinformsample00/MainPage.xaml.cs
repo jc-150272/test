@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
 
+using ZXing.Mobile;
+using ZXing.Net.Mobile.Forms;
 namespace xamarinformsample00
 {
 	public partial class MainPage : TabbedPage
@@ -14,18 +18,6 @@ namespace xamarinformsample00
 			InitializeComponent();
 		}
 
-        private void Common(object sender,EventArgs e)
-        {
-             Navigation.PushAsync(new CommonPage());
-        }
-        private void Backup(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new BackupPage());
-        }
-        private void Help(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new HelpPage());
-        }
-
+        
     }
 }
