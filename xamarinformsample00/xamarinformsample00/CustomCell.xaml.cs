@@ -38,7 +38,6 @@ namespace xamarinformsample00
             get { return (string)GetValue(LocationProperty); }
             set { SetValue(LocationProperty, value); }
         }
-    ...
 
     protected override void OnBindingContextChanged()
         {
